@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Acerca de nosotros';
+const description = 'Estas son las razones por las que nos gustan tanto las bases de datos.';
+const permalink = `${Astro.site.href}about`;
+---
+
+<BaseLayout title={title} description={description} permalink={permalink} current="about">
+  <div class="container">
+    <h1>Acerca de nosotros</h1>
+    <figure class="about-image">
+      <img src="/assets/about-illustration.webp" alt="It's me" width="330">
+    </figure>
+    <p>Somos unos apasionados en el mundo de las bases de datos y en la tecnología en general. Nos encantan las formas en que se puede organizar la información y cómo puede ser consultada. Es interesante pensar que gracias a los SGBD tenemos a nuestra inmediata disposición miles de terabytes de información al alcance de nuestra mano.</p>
+    <p>Nos maravilla cómo los sistemas de gestión de bases de datos (SGBD) han transformado la forma en que interactuamos con la información en la era digital. Desde las simples listas de datos hasta complejas estructuras de información, los SGBD nos permiten almacenar, recuperar y analizar datos de manera eficiente y efectiva. Además, nos fascina cómo estas tecnologías continúan evolucionando constantemente, ofreciendo nuevas características y mejoras que impulsan la innovación en diversos campos, desde la inteligencia artificial hasta la medicina.</p>
+    <p>Explorar el potencial de los SGBD es como adentrarse en un vasto océano de conocimiento, donde cada dato representa una pieza del rompecabezas que nos ayuda a comprender mejor el mundo que nos rodea. Nos emociona pensar en las posibilidades futuras de esta tecnología, que promete abrir nuevas fronteras en la investigación, el desarrollo empresarial y la mejora de la calidad de vida. En resumen, nuestra pasión por los SGBD es un reflejo de nuestro entusiasmo por la capacidad humana de organizar, acceder y aprovechar el poder de la información en la era digital.</p>
+  </div>
+</BaseLayout>
+
+<style>
+  .about-image {
+    float: right;
+    margin: -3em -7em 2em 2em;
+    padding-top: 2em;
+    max-width: 300px;
+  }
+
+  .about-image img {
+    border-radius: 8px;
+    margin-bottom: 1.5em;
+  }
+
+  @media (max-width: 1020px) {
+    .about-image {
+      float: none;
+      margin: 0 auto 2em;
+    }
+  }
+</style>
